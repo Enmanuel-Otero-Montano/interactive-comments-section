@@ -1,0 +1,367 @@
+:root {
+    --background-color: hsl(228, 33%, 97%);
+    --primary-moderate-blue : hsl(238, 40%, 52%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 25px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    background-color: var(--background-color);
+}
+
+.user-comments {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 13px 12px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    position: relative;
+}
+
+.reply-containers {
+    position: relative;
+    left: 3%;
+    width: 86%;
+}
+
+.user-comments__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+}
+
+.avatars-containers {
+    width: 40px;
+}
+
+.avatars {
+    max-width: 100%;
+}
+
+.names {
+    font-weight: 700;
+}
+
+.you {
+    padding: 2px 5px;
+    background-color: var(--primary-moderate-blue);
+    color: hsl(0, 0%, 100%);
+}
+
+/* .comment {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: .9rem;
+    line-height: 1.5;
+} */
+
+.text-color {
+    color: hsl(211, 10%, 45%)
+}
+
+.comments {
+    word-break: break-all;
+}
+
+.comments:focus {
+    padding: 8px;
+    border-radius: 5px;
+    outline: solid .5px hsl(211, 10%, 45%);
+}
+
+.vote-reply {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.vote {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80px;
+    height: 35px;
+    background-color: hsl(223, 19%, 93%);
+    border-radius: 8px;
+}
+
+.buttons {
+    border: none;
+}
+
+.votes {
+    margin: 0;
+    font-weight: 500;
+    color: var(--primary-moderate-blue);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75px;
+    font-weight: 500;
+    background-color: inherit;
+    color: var(--primary-moderate-blue);
+    border-style: none;
+}
+
+.button > p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.delete-edit-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    font-weight: 500;
+}
+
+.delete-button,
+.edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    font-weight: 500;
+    background-color: inherit;
+    border-style: none;
+    color: hsl(358, 79%, 66%);
+}
+
+.edit-button {
+    color: var(--primary-moderate-blue);;
+    width: 65px;
+}
+
+.edit-container {
+    color: var(--primary-moderate-blue);
+}
+
+.write-comment-container {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 13px 12px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+}
+
+.text-area,
+.text-area-edition {
+    width: 100%;
+    padding: 7px 12px;
+    margin-bottom: 20px;
+    border: solid 1px hsl(223, 19%, 73%);
+    border-radius: 8px;
+    resize: none;
+    text-overflow: ellipsis;
+}
+
+.text-area:focus,
+.text-area-edition:focus {
+    outline: solid .5px hsl(211, 10%, 45%);
+}
+
+.current-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.send,
+.update-button {
+    width: 100px;
+    height: 45px;
+    background-color: var(--primary-moderate-blue);
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+}
+
+.margin-b {
+    margin-bottom: 15px;
+}
+
+.update-button {
+    position: relative;
+    left: calc(100% - 100px);
+}
+
+/* EStilos para la modal */
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: scale(0);
+    transition: transform .4s;
+    background-color: hsla(212, 24%, 26%, .6);
+}
+
+.modal__content {
+    width: 310px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.modal__content-title {
+    font-weight: 700;
+    color: hsl(212, 24%, 26%);
+}
+
+.explanation {
+    font-size: .9rem;
+    color: hsl(211, 10%, 45%);
+}
+
+.modal__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__buttons > button {
+    width: 46%;
+    padding: 9px 12px;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border: none;
+}
+
+.modal__buttons--cancel {
+    background-color: hsl(211, 10%, 45%)
+}
+
+.modal__buttons--delete {
+    background-color: hsl(358, 79%, 66%);
+}
+
+.show {
+    transform: scale(1);
+}
+
+/* Estilos para pantallas con resolución mayor o igual a 1024px */
+
+@media screen and (min-width: 1024px) {
+
+    .user-comments {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        grid-template-rows: repeat (2, auto);
+        width: 82%;
+    }
+
+    .reply-containers {
+        width: 76%;
+    }
+
+    .user-comments__header {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        width: 36%;
+    }
+
+    .you {
+        padding: 3px 8px;
+    }
+
+    .vote-reply {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        height: 90px;
+        position: initial;
+    }
+
+    .vote {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35px;
+        height: 100%;
+    }
+
+    .button,
+    .delete-edit-container,
+    .send {
+        position: absolute;
+        top: 13px;
+        right: 12px;
+    }
+
+    .delete-button,
+    .edit-button {
+        position: absolute;
+        top: 2px;
+        right: 75px;
+    }
+
+    .edit-button {
+        position: absolute;
+        right: 0;
+    }
+
+    .update-button {
+        top: calc(100% - 45px);
+        grid-column: 2 / 3;
+    }
+
+    .write-comment-container {
+        display: grid;
+        grid-template-columns: 60px 1fr 140px;
+        grid-template-rows: repeat(2, auto);
+        position: relative;
+        width: 80%;
+    }
+
+    .current-button-container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-items: initial;
+    }
+
+    .text-area {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    @media (hover: hover) {
+        .button:hover,
+        .send:hover {
+            cursor: pointer;
+            opacity: .5;
+        }
+
+        .buttons:hover {
+            cursor: pointer;
+        }
+
+        .text-area:hover {
+            cursor: pointer;
+            border: solid 1px hsl(211, 10%, 45%);
+        }
+
+        .modal__buttons > button:hover {
+            cursor: pointer;
+        }
+    }
+}
