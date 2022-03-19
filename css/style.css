@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     padding-top: 25px;
@@ -36,7 +40,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 92%;
+    width: 96%;
 }
 
 .avatars-containers {
@@ -51,18 +55,15 @@ body {
     font-weight: 700;
 }
 
+.dates {
+    font-size: 14px;
+}
+
 .you {
     padding: 2px 5px;
     background-color: var(--primary-moderate-blue);
     color: hsl(0, 0%, 100%);
 }
-
-/* .comment {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-size: .9rem;
-    line-height: 1.5;
-} */
 
 .text-color {
     color: hsl(211, 10%, 45%)
@@ -105,7 +106,22 @@ body {
     color: var(--primary-moderate-blue);
 }
 
-.button {
+.votes-input {
+    appearance: none;
+    width: 33px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background-color: inherit;
+    text-align: center;
+    color: var(--primary-moderate-blue);
+}
+
+.votes-input:focus {
+    outline: none;
+}
+
+.reply-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +132,7 @@ body {
     border-style: none;
 }
 
-.button > p {
+.reply-button > p {
     margin-top: 6px;
     margin-bottom: 6px;
 }
@@ -135,6 +151,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 80px;
+    height: 40px;
     font-weight: 500;
     background-color: inherit;
     border-style: none;
@@ -173,6 +190,10 @@ body {
 .text-area:focus,
 .text-area-edition:focus {
     outline: solid .5px hsl(211, 10%, 45%);
+}
+
+.undefined {
+    border: solid 1px hsl(0, 90%, 49%);
 }
 
 .current-button-container {
@@ -279,11 +300,15 @@ body {
     .user-comments__header {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
-        width: 36%;
+        width: 40%;
+    }
+
+    .dates {
+        font-size: 16px;
     }
 
     .you {
-        padding: 3px 8px;
+        padding: 3px 7px;
     }
 
     .vote-reply {
@@ -300,7 +325,7 @@ body {
         height: 100%;
     }
 
-    .button,
+    .reply-button,
     .delete-edit-container,
     .send {
         position: absolute;
@@ -330,7 +355,12 @@ body {
         grid-template-columns: 60px 1fr 140px;
         grid-template-rows: repeat(2, auto);
         position: relative;
-        width: 80%;
+        width: 82%;
+    }
+
+    .write-comment-container-for-reply {
+        left: 3%;
+        width: 76%;
     }
 
     .current-button-container {
@@ -345,13 +375,15 @@ body {
     }
 
     @media (hover: hover) {
-        .button:hover,
-        .send:hover {
+        .reply-button:hover,
+        .send:hover,
+        .delete-button:hover,
+        .edit-button:hover {
             cursor: pointer;
             opacity: .5;
         }
 
-        .buttons:hover {
+        .reply-buttons:hover {
             cursor: pointer;
         }
 
@@ -363,5 +395,18 @@ body {
         .modal__buttons > button:hover {
             cursor: pointer;
         }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+
+    .user-comments,
+    .write-comment-container {
+        width: 58%;
+    }
+
+    .reply-containers,
+    .write-comment-container-for-reply {
+        width: 52%;
     }
 }
