@@ -13,27 +13,28 @@
     <title>Intercative comments section</title>
 </head>
 <body>
-    <div id="section" class="section-comments">
-    </div>
-    <div class="write-comment-container margin-b" >
-        <textarea name="" id="text-area" cols="30" rows="5" class="text-area" placeholder="Add a comment..."></textarea>
-        <div class="current-button-container">
-            <div class="avatars-containers">
-                <img src="" class="current-user-img avatars" alt="user photo">
-            </div>
-            <button id="send" class="send">send</button>
-        </div>
-    </div>
-    <div class="modal">
-        <div class="modal__content">
-            <p class="modal__content-title">Delete comment</p>
-            <p class="explanation">Are you sure you want to delete this comment? This will remove the comment and can't be undone.</p>
-            <div class="modal__buttons">
-                <button class="modal__buttons--cancel">NO, CANCEL</button>
-                <button class="modal__buttons--delete">YES, DELETE</button>
+    <main class="main">
+        <div id="section" class="section-comments"></div>
+        <div class="write-comment-container margin-b">
+            <textarea name="" id="text-area" cols="30" rows="5" class="text-area" placeholder="Add a comment..."></textarea>
+            <div class="current-button-container">
+                <div class="avatars-containers">
+                    <img src="./assets/images/avatars/image-juliusomo.webp" class="current-user-img avatars" alt="user photo">
+                </div>
+                <button id="send" class="send">send</button>
             </div>
         </div>
-    </div>
+        <div class="modal">
+            <div class="modal__content">
+                <p class="modal__content-title">Delete comment</p>
+                <p class="explanation">Are you sure you want to delete this comment? This will remove the comment and can't be undone.</p>
+                <div class="modal__buttons">
+                    <button class="modal__buttons--cancel">NO, CANCEL</button>
+                    <button class="modal__buttons--delete">YES, DELETE</button>
+                </div>
+            </div>
+        </div>
+    </main>
     <script src="js/js.js"></script>
 </body>
 </html>
